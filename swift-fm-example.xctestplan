@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "77E66ED9-854F-4DDB-A148-772C8AF91E5D",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:swift-fm-example.xcodeproj",
+      "identifier" : "575853DA2CA3E4B5004BDC3E",
+      "name" : "swift-fm-example"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:swift-fm-example.xcodeproj",
+        "identifier" : "575853EB2CA3E4B6004BDC3E",
+        "name" : "swift-fm-exampleTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:swift-fm-example.xcodeproj",
+        "identifier" : "575853F52CA3E4B6004BDC3E",
+        "name" : "swift-fm-exampleUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
