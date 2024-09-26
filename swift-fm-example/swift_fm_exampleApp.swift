@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct swift_fm_exampleApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
             ContentView()
