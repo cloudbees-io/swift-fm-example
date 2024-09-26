@@ -27,6 +27,7 @@
 		575853DB2CA3E4B5004BDC3E /* swift-fm-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-fm-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		575853EC2CA3E4B6004BDC3E /* swift-fm-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-fm-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		575853F62CA3E4B6004BDC3E /* swift-fm-exampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-fm-exampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5758542F2CA413A3004BDC3E /* swift-fm-example.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "swift-fm-example.xctestplan"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +76,7 @@
 		575853D22CA3E4B5004BDC3E = {
 			isa = PBXGroup;
 			children = (
+				5758542F2CA413A3004BDC3E /* swift-fm-example.xctestplan */,
 				575853DD2CA3E4B5004BDC3E /* swift-fm-example */,
 				575853EF2CA3E4B6004BDC3E /* swift-fm-exampleTests */,
 				575853F92CA3E4B6004BDC3E /* swift-fm-exampleUITests */,
