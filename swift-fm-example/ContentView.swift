@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import ROX
+import ROXCore
 
 enum TitleColor: String {
     case white = "White"
@@ -15,38 +17,80 @@ enum TitleColor: String {
 }
 
 struct ContentView: View {
+    @StateObject private var configurationManager = ConfigurationManager.shared
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-        .onAppear{
-            flags.INSTANCE.enableTutorial.enabled {
-              // TODO: Put your code here that needs to be gated
+        VStack(spacing: 20) {
+            
+            VStack(alignment: .leading, spacing: -5) {
+                Text("CloudBees")
+                    .font(.subheadline) // You can adjust the font size
+                    .fontWeight(.bold) // Bold font for emphasis
+                Text("Feature Management")
+                    .font(.largeTitle) // You can adjust the font size
+                    .fontWeight(.bold) // Bold font for emphasis
             }
             
-            print("color == \(flags.INSTANCE.titleColors)")
-//            switch flags.INSTANCE.titleColors {
-//              case "White":
-//                print("Title color is White")
-//              case "Blue":
-//                print("Title color is Blue")
-//              case "Green":
-//                print("Title color is Green")
-//              case "Yellow":
-//                print("Title color is Yellow")
-//              default:
-//                print("Title color is default - White")
-//            }
+            Spacer()
             
-         }
-    }
+            // Title color text
+            HStack {
+                Text("Title color is: ")
+                    .foregroundColor(Color(.black))
+                Text("\(configurationManager.titleColor)")
+                    .foregroundColor(colorFromName(configurationManager.titleColor.lowercased()))
+                    .font(.headline)
+            }
+           
+            
+            // Title size text
+            Text("Title size is \(configurationManager.titleSize)")
+                .font(.system(size: CGFloat(configurationManager.titleSize)))
+            
+            // Special number text
+            Text("Special number is \(configurationManager.specialNumber)")
+                .font(.body)
 
+            // Enable tutorial toggle
+            HStack {
+                Text("Enable Tutorial")
+                Toggle("", isOn: $configurationManager.enableTutorial)
+                    .labelsHidden() // Hides the default label of the toggle
+            }
+            .padding() // Optional: Add padding around the HStack
+            
+            Spacer()
+        }
+        .padding()
+        .onAppear {
+            // You might want to trigger the fetching of configuration here
+            configurationManager.setupConfigurationFetcher() // Assuming there's a method to fetch configuration
+        }
+    }
+    
+    
+    func colorFromName(_ name: String) -> Color {
+        switch name {
+        case "red":
+            return .red
+        case "green":
+            return .green
+        case "blue":
+            return .blue
+        case "yellow":
+            return .yellow
+        case "black":
+            return .black
+        case "white":
+            return .white
+        default:
+            return .gray // Fallback color
+        }
+    }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

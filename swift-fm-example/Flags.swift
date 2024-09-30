@@ -9,13 +9,10 @@
 import ROX
 import ROXCore
 
-public class flags : RoxContainer {
-  // Define the feature flags
-  let enableTutorial = RoxFlag()
-    // Using a simple singleton pattern
-    // a single instance should be used and injected to using classes and unit tests
-//  let titleColors = RoxString(withDefault: "White", variations: ["White", "Blue", "Green", "Yellow"])
-    
+public class Flags : RoxContainer {
+    // Define the feature flags
+    let enableTutorial = RoxFlag()
+
     let titleColors = RoxString(withDefault: "White",
       variations: ["White", "Blue", "Green", "Yellow"])
       
@@ -23,5 +20,5 @@ public class flags : RoxContainer {
     
     let specialNumber = RoxDouble(withDefault: 3.14, variations: [2.71, 0.577])
    
-    static let INSTANCE = flags()
+    static let INSTANCE = Flags()
 }
