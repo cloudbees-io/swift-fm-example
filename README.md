@@ -64,4 +64,4 @@ Table 1. Feature flags in the example application.
 
 ## Video Preview
 
-[![Video Preview](assets/fm-ios-thumb.jpg)](fm-screen-rec.mov)
+[![Video Preview](assets/fm-ios-thumb.jpg)](assets/fm-screen-rec.mov)
