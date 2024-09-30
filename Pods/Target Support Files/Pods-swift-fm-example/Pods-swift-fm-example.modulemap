@@ -1,6 +1,0 @@
-framework module Pods_swift_fm_example {
-  umbrella header "Pods-swift-fm-example-umbrella.h"
-
-  export *
-  module * { export * }
-}
