@@ -70,7 +70,7 @@ class ConfigurationManager: ObservableObject {
             }
         }
         
-        ROX.setup(withKey: "66f3eecd32af1c29ced3c605", options: options)
+        ROX.setup(withKey: "<Your Cloudbees Environment API Key>", options: options)
     }
     
     // Public method for testing purposes
