@@ -14,9 +14,4 @@ target 'swift-fm-example' do
     pod 'ROX'
   end
 
-  target 'swift-fm-exampleUITests' do
-    # Pods for testing
-    pod 'ROX'
-  end
-
 end
