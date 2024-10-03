@@ -48,9 +48,10 @@ Table 1. Feature flags in the example application.
 
 | Flag name           | Flag type  | Description                    |
 |---------------------|------------|--------------------------------|
-| `enableTutorial`| Boolean | Turns the Tutorial on or off |
-| `titleColors`| String | Sets the font color. The flag value has the following variations: red, green, or blue.|
-| `titleSize` | Int32   | Sets the font size in pixels. The flag value has the following variations: 12, 16, or 24.|
+| `showMessage`| Boolean | Turns the message show or hide |
+| `message`| String | Sets the Message string.|
+| `fontColor`| String | Sets the font color. The flag value has the following variations: red, green,yellow or blue.|
+| `fontSize` | Int32   | Sets the font size in pixels. The flag value has the following variations: 12, 14, or 18.|
 | `specialNumber` | Double   | Sets the number with double. The flag value has the following variations: 2.72, 0.577, 3.14|
 
 **To update flags in the platform UI:** 
