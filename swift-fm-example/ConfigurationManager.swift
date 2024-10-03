@@ -14,9 +14,10 @@ class ConfigurationManager: ObservableObject {
     
     static let shared = ConfigurationManager() // Singleton instance
     
-    @Published var enableTutorial: Bool = false
-    @Published var titleColor: String = Flags.INSTANCE.titleColors.value()
-    @Published var titleSize: Int32 = Flags.INSTANCE.titleSize.value()
+    @Published var showMessage: Bool = false
+    @Published var fontColor: String = Flags.INSTANCE.fontColor.value()
+    @Published var fontSize: Int32 = Flags.INSTANCE.fontSize.value()
+    @Published var message: String = Flags.INSTANCE.message.value()
     @Published var specialNumber: Double = Flags.INSTANCE.specialNumber.value()
     
     private var options: ROXOptions
@@ -52,20 +53,21 @@ class ConfigurationManager: ObservableObject {
                 }
                 
                 // Update the enableTutorial flag
-                self.enableTutorial = Flags.INSTANCE.enableTutorial.isEnabled
-                if self.enableTutorial {
+                self.showMessage = Flags.INSTANCE.showMessage.isEnabled
+                if self.showMessage {
                     print("enableTutorial is true")
                     // TODO: Put your code here that needs to be gated
                 }
                 
                 // Update other flags
-                self.titleColor = Flags.INSTANCE.titleColors.value()
-                self.titleSize = Flags.INSTANCE.titleSize.value()
+                self.message = Flags.INSTANCE.message.value()
+                self.fontColor = Flags.INSTANCE.fontColor.value()
+                self.fontSize = Flags.INSTANCE.fontSize.value()
                 self.specialNumber = Flags.INSTANCE.specialNumber.value()
                 
                 // Print updated values for debug
-                print("Title color is \(self.titleColor)")
-                print("Title size is \(self.titleSize)")
+                print("Message color is \(self.fontColor)")
+                print("Message font size is \(self.fontSize)")
                 print("Special number is \(self.specialNumber)")
             }
         }

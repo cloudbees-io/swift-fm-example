@@ -18,6 +18,7 @@ enum TitleColor: String {
 
 struct ContentView: View {
     @StateObject private var configurationManager = ConfigurationManager.shared
+    @State private var displayText: String = "This is default message; try changing some flag values!"
 
     var body: some View {
         VStack(spacing: 20) {
@@ -33,33 +34,26 @@ struct ContentView: View {
             
             Spacer()
             
-            // Title color text
-            HStack {
-                Text("Title color is: ")
-                    .foregroundColor(Color(.black))
-                Text("\(configurationManager.titleColor)")
-                    .foregroundColor(colorFromName(configurationManager.titleColor.lowercased()))
-                    .font(.headline)
+            VStack {
+                if configurationManager.showMessage {
+                    Text(configurationManager.message)
+                        .font(.system(size: CGFloat(configurationManager.fontSize)))
+                        .foregroundColor(colorFromName(configurationManager.fontColor.lowercased()))
+                        .padding()
+                }
             }
-           
-            
-            // Title size text
-            Text("Title size is \(configurationManager.titleSize)")
-                .font(.system(size: CGFloat(configurationManager.titleSize)))
-            
-            // Special number text
-            Text("Special number is \(configurationManager.specialNumber)")
-                .font(.body)
-
-            // Enable tutorial toggle
-            HStack {
-                Text("Enable Tutorial")
-                Toggle("", isOn: $configurationManager.enableTutorial)
-                    .labelsHidden() // Hides the default label of the toggle
-            }
-            .padding() // Optional: Add padding around the HStack
             
             Spacer()
+            Text("Sign in to the CloudBees platform to modify flag values and see the changes reflacted automatically in this application.")
+                .font(.system(size: 14.0))
+                .foregroundColor(.gray)
+                .padding()
+            
+            Image("CB-stacked-logo-full-color")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 80, height: 80)
+                .shadow(radius: 5)
         }
         .padding()
         .onAppear {
