@@ -1,0 +1,20 @@
+PODS:
+  - ROX (6.0.4):
+    - ROXCore (= 6.0.4)
+  - ROXCore (6.0.4)
+
+DEPENDENCIES:
+  - ROX
+
+SPEC REPOS:
+  trunk:
+    - ROX
+    - ROXCore
+
+SPEC CHECKSUMS:
+  ROX: 62f472c4230a7dbd74094ec4b6ae87b1d61b4dcb
+  ROXCore: c19b22b2d1dd3d8528741d73483be687fe9cdda7
+
+PODFILE CHECKSUM: c3e7376f5d3dc9e590fee05aba55c3855d094edc
+
+COCOAPODS: 1.15.2
