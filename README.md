@@ -1,5 +1,5 @@
 
-# Example Swift iOS application for CloudBees platform feature management
+# Example Swift iOS application for CloudBees platform Feature management
 Use this example application to integrate with the CloudBees platform and test feature management. After integrating, watch the application display change in response to any updates you make to flag values in the platform.
 
 In the example swift application, the ROX SDK is already set up, and feature flags are already coded in.
@@ -10,7 +10,7 @@ To get started with the swift-fm-example project, follow these steps:
 
 1. **Get key from Cloudbees account:** 
 
-    - Create a CloudBees Feature Management account. See [Signup Page](https://app.rollout.io/signup) to create an account.
+    - Create a CloudBees Feature management account. See [Signup Page](https://app.rollout.io/signup) to create an account.
     - Get your environment key. Copy your environment key from App settings > Environments > Key.
 
 2. **Clone the Repository:** 
@@ -42,7 +42,7 @@ git@github.com:cloudbees-io/swift-fm-example.git
 
 ## Use the platform to update flag values
 
-Now that your application is running go to your environment in Feature Management to display the flags available in the example application:
+Now that your application is running go to your environment in Feature management to display the flags available in the example application:
 
 Table 1. Feature flags in the example application.
 
