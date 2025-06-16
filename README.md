@@ -2,16 +2,21 @@
 # Example Swift iOS application for CloudBees platform Feature management
 Use this example application to integrate with the CloudBees platform and test feature management. After integrating, watch the application display change in response to any updates you make to flag values in the platform.
 
-In the example swift application, the ROX SDK is already set up, and feature flags are already coded in.
-
+In the example Swift application, the ROX SDK is already set up, and feature flags are already coded in.
 
 ## Running This Project
 To get started with the swift-fm-example project, follow these steps:
 
-1. **Get key from Cloudbees account:** 
-
+1. **Get the SDK key:** 
     - Create a CloudBees Feature management account. See [Signup Page](https://app.rollout.io/signup) to create an account.
-    - Get your environment key. Copy your environment key from App settings > Environments > Key.
+ - Locate and copy your SDK key:
+          -- Navigate to Feature management > Flags.
+          -- Select an application.
+          -- Select the copy button next to the SDK key on the page.
+      -- If the SDK has not been installed: 
+         -- Navigate to Feature management > Flags.
+         -- Select the Installation instruction buttons on the top right-hand side of the page.
+         -- The UI guides you through creating an environment, linking the environment to an application, and installing the SDK.
 
 2. **Clone the Repository:** 
 Clone the swift-fm-example repository to your local machine using Git:
@@ -21,16 +26,15 @@ git@github.com:cloudbees-io/swift-fm-example.git
 ```
 3. **Install ROX dependency via pod:**
    - Install CocoaPods as described in [CocoaPods Getting Started](https://guides.cocoapods.org/using/getting-started.html#getting-started).
-   - In Terminal, `cd` to your project directory and type `pod install`.
- 
+   - In a Terminal window, `cd` to your project directory and type `pod install`.
 
 4. **Open the Project:**
  
     - Reopen your project in Xcode using the new `.xcworkspace` file.
 
-5. **Setup key from Cloudbees account:** 
+5. **Setup the SDK key:** 
 
-    - In the ConfigurationManager.swift file, replace the `<Your Cloudbees Environment API Key>` with your corresponding API key:
+    - In the ConfigurationManager.swift file, replace the `<Your Cloudbees Environment API Key>` with your corresponding SDK key:
    
     ```
         ROX.setup(withKey: "<Your Cloudbees Environment API Key>", options: options)
@@ -42,7 +46,7 @@ git@github.com:cloudbees-io/swift-fm-example.git
 
 ## Use the platform to update flag values
 
-Now that your application is running go to your environment in Feature management to display the flags available in the example application:
+Now that your application is running, go to your environment in Feature management to display the flags available in the example application:
 
 Table 1. Feature flags in the example application.
 
@@ -57,11 +61,12 @@ Table 1. Feature flags in the example application.
 **To update flags in the platform UI:** 
 
 1. Select **Feature management** from the left pane.
-2. Select the vertical ellipsis icon next to the flag you want to configure.
-3. Select **Configure**.
-4. Select the **Environment** you used for copying the SDK key.
-5. Update a flag value and save your changes.
-6. Switch the **Configuration status** to **On**.
+2. Select the application.
+3. Select the vertical ellipsis next to the flag you want to configure.
+4. Select **Configure**.
+5. Select the **Environment** for the SDK key.
+6. Update a flag value and save your changes.
+7. Set the **Configuration status** to **On**.
 
 ## Video Preview
 
