@@ -8,15 +8,20 @@ In the example Swift application, the ROX SDK is already set up, and feature fla
 To get started with the swift-fm-example project, follow these steps:
 
 1. **Get the SDK key:** 
-    - Create a CloudBees Feature management account. See [Signup Page](https://app.rollout.io/signup) to create an account.
- - Locate and copy your SDK key:
-          -- Navigate to Feature management > Flags.
-          -- Select an application.
-          -- Select the copy button next to the SDK key on the page.
-      -- If the SDK has not been installed: 
-         -- Navigate to Feature management > Flags.
-         -- Select the Installation instruction buttons on the top right-hand side of the page.
-         -- The UI guides you through creating an environment, linking the environment to an application, and installing the SDK.
+ - Create a CloudBees Feature Management account. See the [Signup Page](https://app.rollout.io/signup) to create an account.
+
+   - Locate and copy your SDK key:
+     - Navigate to **Feature management > Flags**
+     - Select an application
+     - Click the **copy** button next to the SDK key on the page
+
+   - If the SDK has not been installed:
+     - Navigate to **Feature management > Flags**
+     - Click the **Installation instructions** button in the top right-hand corner of the page
+     - The UI will walk you through:
+       - Creating an environment
+       - Linking the environment to an application
+       - Installing the SDK
 
 2. **Clone the Repository:** 
 Clone the swift-fm-example repository to your local machine using Git:
@@ -68,6 +73,8 @@ Table 1. Feature flags in the example application.
 6. Update a flag value and save your changes.
 7. Set the **Configuration status** to **On**.
 
-## Video Preview
+## Video preview and link to documentation
+
+Refer to the CloudBees cloud-native platform documentation, [Install the Feature management SDK](https://docs.cloudbees.com/docs/cloudbees-platform/latest/install-sdk/) for more information.
 
 [![Video Preview](assets/fm-ios-thumb.jpg)](assets/fm-screen-rec.mov)
