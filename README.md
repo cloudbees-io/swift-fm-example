@@ -13,11 +13,11 @@ To get started with the swift-fm-example project, follow these steps:
    - Locate and copy your SDK key:
      - Navigate to **Feature management > Flags**
      - Select an application
-     - Click the **copy** button next to the SDK key on the page
+     - Select the **copy** button next to the SDK key on the page
 
    - If the SDK has not been installed:
      - Navigate to **Feature management > Flags**
-     - Click the **Installation instructions** button in the top right-hand corner of the page
+     - Select the **Installation instructions** button in the top right-hand corner of the page
      - The UI will walk you through:
        - Creating an environment
        - Linking the environment to an application
