@@ -8,7 +8,7 @@ In the example Swift application, the ROX SDK is already set up, and feature fla
 To get started with the swift-fm-example project, follow these steps:
 
 1. **Get the SDK key:** 
- - Create a CloudBees Feature Management account. See the [Signup Page](https://app.rollout.io/signup) to create an account.
+ - Create a CloudBees Feature Management account. See the [Signup Page](https://cloudbees.io/) to create an account.
 
    - Locate and copy your SDK key:
      - Navigate to **Feature management > Flags**
