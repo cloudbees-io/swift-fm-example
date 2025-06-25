@@ -15,7 +15,7 @@ git@github.com:cloudbees-io/swift-fm-example.git
 ```
 2. **Open the Project:**
 
-    - Reopen your project in Android Studio.  
+    - Reopen your project in Xcode.  
 
 3. **Get the SDK key:**  
     - Create a CloudBees feature management account. Refer to [Signup Page](https://cloudbees.io/signup) to create an account.  
