@@ -55,7 +55,7 @@ class ConfigurationManagerTests: XCTestCase {
         wait(for: [expectation], timeout: 1.0)
     }
 
-    func testTitleColorUpdate() {
+    func testtitleColorUpdate() {
         let expectation = XCTestExpectation(description: "titleColor updated")
 
         configurationManager.$titleColor

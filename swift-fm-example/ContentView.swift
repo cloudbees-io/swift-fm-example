@@ -9,7 +9,7 @@ import SwiftUI
 import ROX
 import ROXCore
 
-enum TitleColor: String {
+enum titleColor: String {
     case white = "White"
     case blue = "Blue"
     case green = "Green"
@@ -17,57 +17,70 @@ enum TitleColor: String {
 }
 
 struct ContentView: View {
-    @StateObject private var configurationManager = ConfigurationManager.shared
-
+    @StateObject private var configurationManager = ConfigurationManager.INSTANCE
+    @StateObject private var secondConfigurationManager = SecondConfigurationManager.INSTANCE
+    
     var body: some View {
-        VStack(spacing: 20) {
-            
-            VStack(alignment: .leading, spacing: -5) {
-                Text("CloudBees")
-                    .font(.subheadline) // You can adjust the font size
-                    .fontWeight(.bold) // Bold font for emphasis
-                Text("Feature Management")
-                    .font(.largeTitle) // You can adjust the font size
-                    .fontWeight(.bold) // Bold font for emphasis
+        NavigationView {
+            VStack(spacing: 20) {
+                
+                // Header
+                VStack(alignment: .leading, spacing: -5) {
+                    Text("CloudBees")
+                        .font(.subheadline)
+                        .fontWeight(.bold)
+                    Text("Feature Management")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                    Text("Multi-SDK Demo")
+                        .font(.headline)
+                        .foregroundColor(.secondary)
+                }
+                .padding(.bottom)
+                
+                // Multi-SDK Configuration List
+                List {
+                
+                // First Configuration (Named)
+                if let config = configurationManager.roxConfiguration, configurationManager.showText {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("\(config.sdkKey.prefix(5))****")
+                            .font(.headline)
+                            .foregroundColor(.secondary)
+                        Text(configurationManager.displayText)
+                            .font(.system(size: CGFloat(configurationManager.titleSize)))
+                            .foregroundColor(colorFromName(configurationManager.titleColor.lowercased()))
+                    }
+                    .padding()
+                }
+                
+                // Second Configuration (Auto-generated)
+                if let config = secondConfigurationManager.roxConfiguration, secondConfigurationManager.showText {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("\(config.sdkKey.prefix(5))****")
+                            .font(.headline)
+                            .foregroundColor(.secondary)
+                        Text(secondConfigurationManager.displayText)
+                            .font(.system(size: CGFloat(secondConfigurationManager.titleSize)))
+                            .foregroundColor(colorFromName(secondConfigurationManager.titleColor.lowercased()))
+                    }
+                    .padding()
+                }
+                }
+                
+                Spacer()
             }
-            
-            Spacer()
-            
-            // Title color text
-            HStack {
-                Text("Title color is: ")
-                    .foregroundColor(Color(.black))
-                Text("\(configurationManager.titleColor)")
-                    .foregroundColor(colorFromName(configurationManager.titleColor.lowercased()))
-                    .font(.headline)
-            }
-           
-            
-            // Title size text
-            Text("Title size is \(configurationManager.titleSize)")
-                .font(.system(size: CGFloat(configurationManager.titleSize)))
-            
-            // Special number text
-            Text("Special number is \(configurationManager.specialNumber)")
-                .font(.body)
+            .padding()
 
-            // Enable tutorial toggle
-            HStack {
-                Text("Enable Tutorial")
-                Toggle("", isOn: $configurationManager.enableTutorial)
-                    .labelsHidden() // Hides the default label of the toggle
-            }
-            .padding() // Optional: Add padding around the HStack
-            
-            Spacer()
         }
-        .padding()
         .onAppear {
-            // You might want to trigger the fetching of configuration here
-            configurationManager.setupConfigurationFetcher() // Assuming there's a method to fetch configuration
+            // Setup both configurations for multi-SDK demo
+            configurationManager.setupConfigurationFetcher()
+            secondConfigurationManager.setupConfigurationFetcher()
+            
+            print("Multi-SDK Demo: Configuration fetchers initialized")
         }
     }
-    
     
     func colorFromName(_ name: String) -> Color {
         switch name {
@@ -94,3 +107,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+    
+
