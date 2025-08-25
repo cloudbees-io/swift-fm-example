@@ -17,8 +17,7 @@ enum titleColor: String {
 }
 
 struct ContentView: View {
-    @StateObject private var configurationManager = ConfigurationManager.INSTANCE
-    @StateObject private var secondConfigurationManager = SecondConfigurationManager.INSTANCE
+    @StateObject private var uiManager = UIUpdateManager.shared
     
     var body: some View {
         NavigationView {
@@ -41,28 +40,28 @@ struct ContentView: View {
                 // Multi-SDK Configuration List
                 List {
                 
-                // First Configuration (Named)
-                if let config = configurationManager.roxConfiguration, configurationManager.showText {
+                // Production Configuration
+                if uiManager.showProductionText {
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("\(config.sdkKey.prefix(5))****")
+                        Text("\(uiManager.productionSDKKey.prefix(5))****")
                             .font(.headline)
                             .foregroundColor(.secondary)
-                        Text(configurationManager.displayText)
-                            .font(.system(size: CGFloat(configurationManager.titleSize)))
-                            .foregroundColor(colorFromName(configurationManager.titleColor.lowercased()))
+                        Text(uiManager.productionTitle)
+                            .font(.system(size: CGFloat(uiManager.productionTitleSize)))
+                            .foregroundColor(colorFromName(uiManager.productionTitleColor.lowercased()))
                     }
                     .padding()
                 }
                 
-                // Second Configuration (Auto-generated)
-                if let config = secondConfigurationManager.roxConfiguration, secondConfigurationManager.showText {
+                // Staging Configuration
+                if uiManager.showStagingText {
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("\(config.sdkKey.prefix(5))****")
+                        Text("\(uiManager.stagingSDKKey.prefix(5))****")
                             .font(.headline)
                             .foregroundColor(.secondary)
-                        Text(secondConfigurationManager.displayText)
-                            .font(.system(size: CGFloat(secondConfigurationManager.titleSize)))
-                            .foregroundColor(colorFromName(secondConfigurationManager.titleColor.lowercased()))
+                        Text(uiManager.stagingTitle)
+                            .font(.system(size: CGFloat(uiManager.stagingTitleSize)))
+                            .foregroundColor(colorFromName(uiManager.stagingTitleColor.lowercased()))
                     }
                     .padding()
                 }
@@ -74,11 +73,11 @@ struct ContentView: View {
 
         }
         .onAppear {
-            // Setup both configurations for multi-SDK demo
-            configurationManager.setupConfigurationFetcher()
-            secondConfigurationManager.setupConfigurationFetcher()
+            // Initial UI update
+            uiManager.updateProductionValues()
+            uiManager.updateStagingValues()
             
-            print("Multi-SDK Demo: Configuration fetchers initialized")
+            print("Multi-SDK Demo: UI manager initialized")
         }
     }
     

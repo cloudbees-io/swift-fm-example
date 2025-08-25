@@ -6,10 +6,11 @@
 //
 
 
+import Foundation
 import ROX
 import ROXCore
 
-public class Flags1 : ROXBaseContainer {
+public class Flags1 : RoxContainer {
     // Define the feature flags
     let titleColors = RoxString(withDefault: "Blue",
       variations: ["White", "Blue", "Green", "Yellow", "red"])
@@ -25,7 +26,7 @@ public class Flags1 : ROXBaseContainer {
     static let INSTANCE = Flags1()
 }
 
-public class Flags2 : ROXBaseContainer {
+public class Flags2 : RoxContainer {
     // Define the feature flags
     let titleColors = RoxString(withDefault: "Yellow",
       variations: ["White", "Blue", "Green", "Yellow", "red"])

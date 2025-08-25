@@ -4,17 +4,21 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		rpNLI+toPbHd7EJ7ZDr2l1lPID0=
+		</data>
 		<key>Headers/ROXBaseContainer.h</key>
 		<data>
-		Q7GRv3NKj91T+pM0QPRMMeiiR8k=
+		CPVwtfnjB5qZSaJ3I5AeyUvoTDw=
 		</data>
 		<key>Headers/ROXCore.h</key>
 		<data>
-		4q/0gKxvAi6hW+a/ngNBPnXhhyI=
+		ih2mrWCQUash+SAdopwyWCN69PA=
 		</data>
 		<key>Headers/ROXDouble.h</key>
 		<data>
-		HkKeGCnSdXUBoDSJ4Ugq4OsGEsA=
+		bQTnifY9JJZ2/aN58jUrFfNy7jM=
 		</data>
 		<key>Headers/ROXDynamicAPI.h</key>
 		<data>
@@ -34,7 +38,7 @@
 		</data>
 		<key>Headers/ROXFlag.h</key>
 		<data>
-		Dgf7xiFn3cKICeoaYbKnWzXp2Kw=
+		flz7Hc3sW0l62+bJ6KIpyFjr1Hk=
 		</data>
 		<key>Headers/ROXFlagsOverrides.h</key>
 		<data>
@@ -46,7 +50,7 @@
 		</data>
 		<key>Headers/ROXInt.h</key>
 		<data>
-		63XIzkbnjUEgZ+BnVgScF8sWlEg=
+		oBU65h+z6KaAk/9kfcA+e6Xk7qE=
 		</data>
 		<key>Headers/ROXNetworkConfigurationsOptions.h</key>
 		<data>
@@ -58,15 +62,15 @@
 		</data>
 		<key>Headers/ROXReportingValue.h</key>
 		<data>
-		qwH0eqGNOS98Kphln+08bldAwaM=
+		oJWWr0aVUIGtNXySogNSF3lGkvE=
 		</data>
 		<key>Headers/ROXString.h</key>
 		<data>
-		Fl7EKLFVqiR9XN0jygLN5vJIa9Q=
+		vrVAA5N/Hu+HTC0qa0cA/cmpxho=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		n12w4HTm1mEiddfNfJw3+hu8Hfk=
+		gIsoeedAG5YwiNZfhrM+TViYXkM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -79,21 +83,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			F6H9sS/WKq6HgI2WWF8lW6FGMe792vXXmgBf5ZMOasQ=
+			UCsh3nvtxMJ43c2PAVRpFYgFc+kx/Pvw84c411sk5pM=
 			</data>
 		</dict>
 		<key>Headers/ROXCore.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JWMKyuDEex9AK03LuBh3d/DWxz/6WkhGGdrmVmTMM04=
+			NXHur4jt3/eeYwiB1tABNN+47usaWguPCOPW7t9sK/g=
 			</data>
 		</dict>
 		<key>Headers/ROXDouble.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6YsxTw4p5ZSE093EdMjvIz+uif4rHPzHbCl5jB1r3SQ=
+			KnSnQva2vywxb24mktFBRCMTNczqjNvG4DFEr+e2mgU=
 			</data>
 		</dict>
 		<key>Headers/ROXDynamicAPI.h</key>
@@ -128,7 +132,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0RKdkTanojWdXyGijBdWc3rm/al/KLn23xkzQ8FFIi0=
+			IZZOSgnBfY0YPlG3PcK0q3cVTsMVCix5BbzQinUWWDU=
 			</data>
 		</dict>
 		<key>Headers/ROXFlagsOverrides.h</key>
@@ -149,7 +153,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NrnZop2pxVuAlFgB2hQvIvXHW8Iw6Pg3B3Wn07TTnrI=
+			ko0/33of8HXYHecNUdHrF/OKVBHMrGWqU5bY118AhIM=
 			</data>
 		</dict>
 		<key>Headers/ROXNetworkConfigurationsOptions.h</key>
@@ -170,14 +174,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VFm6YFs8CSw9bU7RZpu2Ol+qrAsK64C+a19xVNko6dg=
+			sXdFdLMYCXEmLIKl3mSV6grln728W/d9v6uY3z4L/Ao=
 			</data>
 		</dict>
 		<key>Headers/ROXString.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bVCGEeNZIP1biggtrSGilFnh0Ist3mz//3JaRwBolDQ=
+			JP3QgGiz1uMLSdFw0eTFzFp20UZm5a4pbrb5A74QXZU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

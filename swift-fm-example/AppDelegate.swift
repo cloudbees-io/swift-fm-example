@@ -1,44 +1,115 @@
-//
-//  AppDelegate.swift
-//  swift-fm-example
-//
-//  Created by Ankur Vekariya on 25/09/24.
-//
-
+import Foundation
 import UIKit
 import ROX
 import ROXCore
+import SwiftUI
 
-class AppDelegate: NSObject, UIApplicationDelegate {
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+class AppDelegate: UIResponder, UIApplicationDelegate, ObservableObject {
+    
+    // SDK keys for different environments
+    let productionSDKKey = "4265c764-bae2-42e1-b3f6-2159ce9e1c49"
+    let stagingSDKKey = "5fff5164-414f-4bdd-b8d0-a42225e42c8b"
+    
+    // ROX instances
+    private var productionInstance: ROXInstance?
+    private var stagingInstance: ROXInstance?
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Setup ROX SDK with options
+        print("AppDelegate: Setting up ROX SDK")
         
-        // Initialize Multi-SDK ROX configurations
-        do {
-            // Create options with appropriate logging levels
-            let prodOptions = ROXOptions()
-//            prodOptions.verbose = .debug // Enable debug to see fetch events
+        // Set SDK keys in UI manager
+        UIUpdateManager.shared.setSDKKeys(production: productionSDKKey, staging: stagingSDKKey)
+        
+        // Create options for production instance
+        let productionOptions = ROXOptions()
+        productionOptions.verbose = .debug
+        productionOptions.onConfigurationFetched = { result in
+            print("PRODUCTION onConfigurationFetched called with result: \(result.fetcherStatus)")
+            print("PRODUCTION SDK Key: \(self.productionSDKKey)")
+            print("PRODUCTION hasChanges: \(result.hasChanges)")
             
-            let stagingOptions = ROXOptions()
-//            stagingOptions.verbose = .debug // Enable debug to see fetch events
-            
-            // Create two configurations for multi-SDK demo
-            let prodConfig = try ROXConfigurationManager.add(key: "da0d45ee-6daf-4583-9c05-d8ce36b5103a")
-            let stagingConfig = try ROXConfigurationManager.add(key: "db241ffa-bf9d-4c94-8169-5a686c2b5958")
-            
-            print("Multi-SDK Demo: Created configurations:")
-            print("- Production: name='\(prodConfig.name)', SDK key='\(prodConfig.sdkKey)'")
-            print("- Staging: name='\(stagingConfig.name)', SDK key='\(stagingConfig.sdkKey)'")
-            
-            // Initialize configuration managers with configurations and options
-            ConfigurationManager.INSTANCE = ConfigurationManager(configuration: prodConfig, options: prodOptions)
-            SecondConfigurationManager.INSTANCE = SecondConfigurationManager(configuration: stagingConfig, options: stagingOptions)
-            
-            print("Multi-SDK Demo: Configuration managers initialized")
-            
-        } catch {
-            print("Multi-SDK Demo: Error initializing ROX configurations: \(error)")
+            // Update UI through UIUpdateManager
+            UIUpdateManager.shared.updateProductionValues()
         }
+        
+        // Create and setup production instance
+        print("AppDelegate: Creating production ROX instance")
+        productionInstance = ROX.instance(withKey: productionSDKKey)
+        productionInstance?.setup(withOptions: productionOptions)
+        
+        // Create options for staging instance
+        let stagingOptions = ROXOptions()
+        stagingOptions.verbose = .debug
+        stagingOptions.onConfigurationFetched = { result in
+            print("STAGING onConfigurationFetched called with result: \(result.fetcherStatus)")
+            print("STAGING SDK Key: \(self.stagingSDKKey)")
+            print("STAGING hasChanges: \(result.hasChanges)")
+            
+            // Update UI through UIUpdateManager
+            UIUpdateManager.shared.updateStagingValues()
+        }
+        
+        // Create and setup staging instance
+        print("AppDelegate: Creating staging ROX instance")
+        stagingInstance = ROX.instance(withKey: stagingSDKKey)
+        stagingInstance?.setup(withOptions: stagingOptions)
+        
+        // Register flag containers to their respective SDK keys
+        print("AppDelegate: Registering flag containers")
+        registerFlagContainers()
+        
+        // Set custom properties for each instance
+        setCustomProperties()
+        
+        // Fetch configurations
+        print("AppDelegate: Fetching configurations")
+        fetchConfigurations()
         
         return true
     }
+    
+    func registerFlagContainers() {
+        // Register Flags1 to production instance
+        print("AppDelegate: Registering Flags1 to production instance")
+        productionInstance?.register(container: Flags1.INSTANCE)
+        
+        // Register Flags2 to staging instance
+        print("AppDelegate: Registering Flags2 to staging instance")
+        stagingInstance?.register("features", container: Flags2.INSTANCE)
+        
+        print("AppDelegate: Flag containers registered successfully")
+    }
+    
+    func setCustomProperties() {
+        // Set custom properties using instance-specific API
+        print("AppDelegate: Setting custom properties")
+        
+        // Set production properties using instance method
+        print("AppDelegate: Setting production custom properties")
+        productionInstance?.setCustomProperty(key: "env-BBB-prod", value: "production")
+        productionInstance?.setCustomProperty(key: "version", value: "1.0.0")
+        productionInstance?.setCustomProperty(key: "platform", value: "iOS")
+        
+        // Set staging properties using instance method
+        print("AppDelegate: Setting staging custom properties")
+        stagingInstance?.setCustomProperty(key: "env-BBB-staging", value: "staging")
+        stagingInstance?.setCustomProperty(key: "version", value: "1.0.0")
+        stagingInstance?.setCustomProperty(key: "platform", value: "iOS")
+        
+        print("AppDelegate: Custom properties set for both instances")
+    }
+    
+    func fetchConfigurations() {
+        // Fetch configuration for production instance
+        print("AppDelegate: Fetching production configuration")
+        productionInstance?.fetch()
+        
+        // Fetch configuration for staging instance
+        print("AppDelegate: Fetching staging configuration")
+        stagingInstance?.fetch()
+        
+        print("AppDelegate: Configurations fetched successfully")
+    }
 }
+
