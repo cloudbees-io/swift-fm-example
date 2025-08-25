@@ -7,8 +7,8 @@ import SwiftUI
 class AppDelegate: UIResponder, UIApplicationDelegate, ObservableObject {
     
     // SDK keys for different environments
-    let productionSDKKey = "4265c764-bae2-42e1-b3f6-2159ce9e1c49"
-    let stagingSDKKey = "5fff5164-414f-4bdd-b8d0-a42225e42c8b"
+    let productionSDKKey = "your-production-sdk-key"
+    let stagingSDKKey = "your-staging-sdk-key"
     
     // ROX instances
     private var productionInstance: ROXInstance?
