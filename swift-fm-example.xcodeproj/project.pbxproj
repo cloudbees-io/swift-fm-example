@@ -3,237 +3,260 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		199B3AC55F7DAEC502316949 /* Pods_swift_fm_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA33088463DBB91B52B92738 /* Pods_swift_fm_example.framework */; };
-		577C93CF2CAAB0BB00954B7F /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577C93CD2CAAB0BB00954B7F /* ConfigurationManager.swift */; };
-		577C93D02CAAB0BB00954B7F /* Flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577C93CE2CAAB0BB00954B7F /* Flags.swift */; };
-		57D315F82CAA99AA008FE010 /* swift_fm_exampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D315F72CAA99AA008FE010 /* swift_fm_exampleApp.swift */; };
-		57D315FA2CAA99AA008FE010 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D315F92CAA99AA008FE010 /* ContentView.swift */; };
-		57D315FC2CAA99AB008FE010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57D315FB2CAA99AB008FE010 /* Assets.xcassets */; };
-		57D316002CAA99AB008FE010 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57D315FF2CAA99AB008FE010 /* Preview Assets.xcassets */; };
-		57D3160A2CAA99AB008FE010 /* swift_fm_exampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D316092CAA99AB008FE010 /* swift_fm_exampleTests.swift */; };
-		E6ACB6F2074FC08F6AA572FD /* Pods_swift_fm_exampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7B9650D27F4432CB43DC883 /* Pods_swift_fm_exampleTests.framework */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
-		57D316062CAA99AB008FE010 /* PBXContainerItemProxy */ = {
+		575853ED2CA3E4B6004BDC3E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 57D315EC2CAA99AA008FE010 /* Project object */;
+			containerPortal = 575853D32CA3E4B5004BDC3E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 57D315F32CAA99AA008FE010;
+			remoteGlobalIDString = 575853DA2CA3E4B5004BDC3E;
+			remoteInfo = "swift-fm-example";
+		};
+		575853F72CA3E4B6004BDC3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 575853D32CA3E4B5004BDC3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 575853DA2CA3E4B5004BDC3E;
 			remoteInfo = "swift-fm-example";
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		579D45DA2E2505A700113730 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		22893BFE5898E2A240A678C9 /* Pods-swift-fm-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-fm-example.release.xcconfig"; path = "Target Support Files/Pods-swift-fm-example/Pods-swift-fm-example.release.xcconfig"; sourceTree = "<group>"; };
-		3ED9EAB1BD314D278708B85B /* Pods-swift-fm-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-fm-example.debug.xcconfig"; path = "Target Support Files/Pods-swift-fm-example/Pods-swift-fm-example.debug.xcconfig"; sourceTree = "<group>"; };
-		577C93CD2CAAB0BB00954B7F /* ConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
-		577C93CE2CAAB0BB00954B7F /* Flags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flags.swift; sourceTree = "<group>"; };
-		57D315F42CAA99AA008FE010 /* swift-fm-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-fm-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		57D315F72CAA99AA008FE010 /* swift_fm_exampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_fm_exampleApp.swift; sourceTree = "<group>"; };
-		57D315F92CAA99AA008FE010 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		57D315FB2CAA99AB008FE010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		57D315FD2CAA99AB008FE010 /* swift_fm_example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = swift_fm_example.entitlements; sourceTree = "<group>"; };
-		57D315FF2CAA99AB008FE010 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		57D316052CAA99AB008FE010 /* swift-fm-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-fm-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		57D316092CAA99AB008FE010 /* swift_fm_exampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_fm_exampleTests.swift; sourceTree = "<group>"; };
-		61C1BCFEBC160F4E3133B78C /* Pods-swift-fm-exampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-fm-exampleTests.debug.xcconfig"; path = "Target Support Files/Pods-swift-fm-exampleTests/Pods-swift-fm-exampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		62CD3D56C64C5C3A4EDC51EB /* Pods-swift-fm-example-swift-fm-exampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-fm-example-swift-fm-exampleUITests.release.xcconfig"; path = "Target Support Files/Pods-swift-fm-example-swift-fm-exampleUITests/Pods-swift-fm-example-swift-fm-exampleUITests.release.xcconfig"; sourceTree = "<group>"; };
-		AA33088463DBB91B52B92738 /* Pods_swift_fm_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_fm_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7B9650D27F4432CB43DC883 /* Pods_swift_fm_exampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_fm_exampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAEC187B0F2A9523361B2243 /* Pods-swift-fm-exampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-fm-exampleTests.release.xcconfig"; path = "Target Support Files/Pods-swift-fm-exampleTests/Pods-swift-fm-exampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		CBD4D1E238FBAC264B07D3F3 /* Pods-swift-fm-example-swift-fm-exampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-fm-example-swift-fm-exampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-swift-fm-example-swift-fm-exampleUITests/Pods-swift-fm-example-swift-fm-exampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DA9EA51D69F4DC75D874EB0C /* Pods_swift_fm_example_swift_fm_exampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_fm_example_swift_fm_exampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		575853DB2CA3E4B5004BDC3E /* swift-fm-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-fm-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		575853EC2CA3E4B6004BDC3E /* swift-fm-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-fm-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		575853F62CA3E4B6004BDC3E /* swift-fm-exampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-fm-exampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5758542F2CA413A3004BDC3E /* swift-fm-example.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "swift-fm-example.xctestplan"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		5717E2162E5C4C1B0004FA0A /* Exceptions for "swift-fm-example" folder in "Embed Frameworks" phase from "swift-fm-example" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				ROX.framework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+				ROXCore.framework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+			};
+			buildPhase = 579D45DA2E2505A700113730 /* Embed Frameworks */;
+			membershipExceptions = (
+				ROX.framework,
+				ROXCore.framework,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		575853DD2CA3E4B5004BDC3E /* swift-fm-example */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5717E2162E5C4C1B0004FA0A /* Exceptions for "swift-fm-example" folder in "Embed Frameworks" phase from "swift-fm-example" target */,
+			);
+			path = "swift-fm-example";
+			sourceTree = "<group>";
+		};
+		575853EF2CA3E4B6004BDC3E /* swift-fm-exampleTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "swift-fm-exampleTests";
+			sourceTree = "<group>";
+		};
+		575853F92CA3E4B6004BDC3E /* swift-fm-exampleUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "swift-fm-exampleUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
-		57D315F12CAA99AA008FE010 /* Frameworks */ = {
+		575853D82CA3E4B5004BDC3E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				199B3AC55F7DAEC502316949 /* Pods_swift_fm_example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		57D316022CAA99AB008FE010 /* Frameworks */ = {
+		575853E92CA3E4B6004BDC3E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6ACB6F2074FC08F6AA572FD /* Pods_swift_fm_exampleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		575853F32CA3E4B6004BDC3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		57D315EB2CAA99AA008FE010 = {
+		575853D22CA3E4B5004BDC3E = {
 			isa = PBXGroup;
 			children = (
-				57D315F62CAA99AA008FE010 /* swift-fm-example */,
-				57D316082CAA99AB008FE010 /* swift-fm-exampleTests */,
-				57D315F52CAA99AA008FE010 /* Products */,
-				E4CC48EF5B656B4A777F1338 /* Pods */,
-				C5EA7B8FC86FC4BEB18440B5 /* Frameworks */,
+				5758542F2CA413A3004BDC3E /* swift-fm-example.xctestplan */,
+				575853DD2CA3E4B5004BDC3E /* swift-fm-example */,
+				575853EF2CA3E4B6004BDC3E /* swift-fm-exampleTests */,
+				575853F92CA3E4B6004BDC3E /* swift-fm-exampleUITests */,
+				575853DC2CA3E4B5004BDC3E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		57D315F52CAA99AA008FE010 /* Products */ = {
+		575853DC2CA3E4B5004BDC3E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				57D315F42CAA99AA008FE010 /* swift-fm-example.app */,
-				57D316052CAA99AB008FE010 /* swift-fm-exampleTests.xctest */,
+				575853DB2CA3E4B5004BDC3E /* swift-fm-example.app */,
+				575853EC2CA3E4B6004BDC3E /* swift-fm-exampleTests.xctest */,
+				575853F62CA3E4B6004BDC3E /* swift-fm-exampleUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		57D315F62CAA99AA008FE010 /* swift-fm-example */ = {
-			isa = PBXGroup;
-			children = (
-				577C93CD2CAAB0BB00954B7F /* ConfigurationManager.swift */,
-				577C93CE2CAAB0BB00954B7F /* Flags.swift */,
-				57D315F72CAA99AA008FE010 /* swift_fm_exampleApp.swift */,
-				57D315F92CAA99AA008FE010 /* ContentView.swift */,
-				57D315FB2CAA99AB008FE010 /* Assets.xcassets */,
-				57D315FD2CAA99AB008FE010 /* swift_fm_example.entitlements */,
-				57D315FE2CAA99AB008FE010 /* Preview Content */,
-			);
-			path = "swift-fm-example";
-			sourceTree = "<group>";
-		};
-		57D315FE2CAA99AB008FE010 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				57D315FF2CAA99AB008FE010 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		57D316082CAA99AB008FE010 /* swift-fm-exampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				57D316092CAA99AB008FE010 /* swift_fm_exampleTests.swift */,
-			);
-			path = "swift-fm-exampleTests";
-			sourceTree = "<group>";
-		};
-		C5EA7B8FC86FC4BEB18440B5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AA33088463DBB91B52B92738 /* Pods_swift_fm_example.framework */,
-				DA9EA51D69F4DC75D874EB0C /* Pods_swift_fm_example_swift_fm_exampleUITests.framework */,
-				C7B9650D27F4432CB43DC883 /* Pods_swift_fm_exampleTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E4CC48EF5B656B4A777F1338 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3ED9EAB1BD314D278708B85B /* Pods-swift-fm-example.debug.xcconfig */,
-				22893BFE5898E2A240A678C9 /* Pods-swift-fm-example.release.xcconfig */,
-				CBD4D1E238FBAC264B07D3F3 /* Pods-swift-fm-example-swift-fm-exampleUITests.debug.xcconfig */,
-				62CD3D56C64C5C3A4EDC51EB /* Pods-swift-fm-example-swift-fm-exampleUITests.release.xcconfig */,
-				61C1BCFEBC160F4E3133B78C /* Pods-swift-fm-exampleTests.debug.xcconfig */,
-				CAEC187B0F2A9523361B2243 /* Pods-swift-fm-exampleTests.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		57D315F32CAA99AA008FE010 /* swift-fm-example */ = {
+		575853DA2CA3E4B5004BDC3E /* swift-fm-example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57D316192CAA99AB008FE010 /* Build configuration list for PBXNativeTarget "swift-fm-example" */;
+			buildConfigurationList = 575854002CA3E4B6004BDC3E /* Build configuration list for PBXNativeTarget "swift-fm-example" */;
 			buildPhases = (
-				DF14D29838D30BC149E96F28 /* [CP] Check Pods Manifest.lock */,
-				57D315F02CAA99AA008FE010 /* Sources */,
-				57D315F12CAA99AA008FE010 /* Frameworks */,
-				57D315F22CAA99AA008FE010 /* Resources */,
-				74FB80E12C8D2895E1EFD6EB /* [CP] Embed Pods Frameworks */,
+				575853D72CA3E4B5004BDC3E /* Sources */,
+				575853D82CA3E4B5004BDC3E /* Frameworks */,
+				575853D92CA3E4B5004BDC3E /* Resources */,
+				579D45DA2E2505A700113730 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				575853DD2CA3E4B5004BDC3E /* swift-fm-example */,
 			);
 			name = "swift-fm-example";
+			packageProductDependencies = (
+			);
 			productName = "swift-fm-example";
-			productReference = 57D315F42CAA99AA008FE010 /* swift-fm-example.app */;
+			productReference = 575853DB2CA3E4B5004BDC3E /* swift-fm-example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		57D316042CAA99AB008FE010 /* swift-fm-exampleTests */ = {
+		575853EB2CA3E4B6004BDC3E /* swift-fm-exampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57D3161C2CAA99AB008FE010 /* Build configuration list for PBXNativeTarget "swift-fm-exampleTests" */;
+			buildConfigurationList = 575854032CA3E4B6004BDC3E /* Build configuration list for PBXNativeTarget "swift-fm-exampleTests" */;
 			buildPhases = (
-				7EDB32B58682F4CBDF4B2E91 /* [CP] Check Pods Manifest.lock */,
-				57D316012CAA99AB008FE010 /* Sources */,
-				57D316022CAA99AB008FE010 /* Frameworks */,
-				57D316032CAA99AB008FE010 /* Resources */,
-				332771CF7DD33F55DAA3362B /* [CP] Embed Pods Frameworks */,
+				575853E82CA3E4B6004BDC3E /* Sources */,
+				575853E92CA3E4B6004BDC3E /* Frameworks */,
+				575853EA2CA3E4B6004BDC3E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				57D316072CAA99AB008FE010 /* PBXTargetDependency */,
+				575853EE2CA3E4B6004BDC3E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				575853EF2CA3E4B6004BDC3E /* swift-fm-exampleTests */,
 			);
 			name = "swift-fm-exampleTests";
+			packageProductDependencies = (
+			);
 			productName = "swift-fm-exampleTests";
-			productReference = 57D316052CAA99AB008FE010 /* swift-fm-exampleTests.xctest */;
+			productReference = 575853EC2CA3E4B6004BDC3E /* swift-fm-exampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		575853F52CA3E4B6004BDC3E /* swift-fm-exampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 575854062CA3E4B6004BDC3E /* Build configuration list for PBXNativeTarget "swift-fm-exampleUITests" */;
+			buildPhases = (
+				575853F22CA3E4B6004BDC3E /* Sources */,
+				575853F32CA3E4B6004BDC3E /* Frameworks */,
+				575853F42CA3E4B6004BDC3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				575853F82CA3E4B6004BDC3E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				575853F92CA3E4B6004BDC3E /* swift-fm-exampleUITests */,
+			);
+			name = "swift-fm-exampleUITests";
+			packageProductDependencies = (
+			);
+			productName = "swift-fm-exampleUITests";
+			productReference = 575853F62CA3E4B6004BDC3E /* swift-fm-exampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		57D315EC2CAA99AA008FE010 /* Project object */ = {
+		575853D32CA3E4B5004BDC3E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					57D315F32CAA99AA008FE010 = {
-						CreatedOnToolsVersion = 15.4;
+					575853DA2CA3E4B5004BDC3E = {
+						CreatedOnToolsVersion = 16.0;
 					};
-					57D316042CAA99AB008FE010 = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 57D315F32CAA99AA008FE010;
+					575853EB2CA3E4B6004BDC3E = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 575853DA2CA3E4B5004BDC3E;
+					};
+					575853F52CA3E4B6004BDC3E = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 575853DA2CA3E4B5004BDC3E;
 					};
 				};
 			};
-			buildConfigurationList = 57D315EF2CAA99AA008FE010 /* Build configuration list for PBXProject "swift-fm-example" */;
-			compatibilityVersion = "Xcode 14.0";
+			buildConfigurationList = 575853D62CA3E4B5004BDC3E /* Build configuration list for PBXProject "swift-fm-example" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 57D315EB2CAA99AA008FE010;
-			productRefGroup = 57D315F52CAA99AA008FE010 /* Products */;
+			mainGroup = 575853D22CA3E4B5004BDC3E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 575853DC2CA3E4B5004BDC3E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				57D315F32CAA99AA008FE010 /* swift-fm-example */,
-				57D316042CAA99AB008FE010 /* swift-fm-exampleTests */,
+				575853DA2CA3E4B5004BDC3E /* swift-fm-example */,
+				575853EB2CA3E4B6004BDC3E /* swift-fm-exampleTests */,
+				575853F52CA3E4B6004BDC3E /* swift-fm-exampleUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		57D315F22CAA99AA008FE010 /* Resources */ = {
+		575853D92CA3E4B5004BDC3E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57D316002CAA99AB008FE010 /* Preview Assets.xcassets in Resources */,
-				57D315FC2CAA99AB008FE010 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		57D316032CAA99AB008FE010 /* Resources */ = {
+		575853EA2CA3E4B6004BDC3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		575853F42CA3E4B6004BDC3E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -242,119 +265,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		332771CF7DD33F55DAA3362B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-swift-fm-exampleTests/Pods-swift-fm-exampleTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-swift-fm-exampleTests/Pods-swift-fm-exampleTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swift-fm-exampleTests/Pods-swift-fm-exampleTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		74FB80E12C8D2895E1EFD6EB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-swift-fm-example/Pods-swift-fm-example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-swift-fm-example/Pods-swift-fm-example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swift-fm-example/Pods-swift-fm-example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7EDB32B58682F4CBDF4B2E91 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-swift-fm-exampleTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DF14D29838D30BC149E96F28 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-swift-fm-example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		57D315F02CAA99AA008FE010 /* Sources */ = {
+		575853D72CA3E4B5004BDC3E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57D315FA2CAA99AA008FE010 /* ContentView.swift in Sources */,
-				57D315F82CAA99AA008FE010 /* swift_fm_exampleApp.swift in Sources */,
-				577C93CF2CAAB0BB00954B7F /* ConfigurationManager.swift in Sources */,
-				577C93D02CAAB0BB00954B7F /* Flags.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		57D316012CAA99AB008FE010 /* Sources */ = {
+		575853E82CA3E4B6004BDC3E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57D3160A2CAA99AB008FE010 /* swift_fm_exampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		575853F22CA3E4B6004BDC3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		57D316072CAA99AB008FE010 /* PBXTargetDependency */ = {
+		575853EE2CA3E4B6004BDC3E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 57D315F32CAA99AA008FE010 /* swift-fm-example */;
-			targetProxy = 57D316062CAA99AB008FE010 /* PBXContainerItemProxy */;
+			target = 575853DA2CA3E4B5004BDC3E /* swift-fm-example */;
+			targetProxy = 575853ED2CA3E4B6004BDC3E /* PBXContainerItemProxy */;
+		};
+		575853F82CA3E4B6004BDC3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 575853DA2CA3E4B5004BDC3E /* swift-fm-example */;
+			targetProxy = 575853F72CA3E4B6004BDC3E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		57D316172CAA99AB008FE010 /* Debug */ = {
+		575853FE2CA3E4B6004BDC3E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -387,7 +336,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -407,7 +355,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -417,7 +364,7 @@
 			};
 			name = Debug;
 		};
-		57D316182CAA99AB008FE010 /* Release */ = {
+		575853FF2CA3E4B6004BDC3E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -463,7 +410,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -471,9 +417,8 @@
 			};
 			name = Release;
 		};
-		57D3161A2CAA99AB008FE010 /* Debug */ = {
+		575854012CA3E4B6004BDC3E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3ED9EAB1BD314D278708B85B /* Pods-swift-fm-example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -482,7 +427,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"swift-fm-example/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/swift-fm-example",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -494,24 +442,24 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.7;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cb.swift-fm-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
-		57D3161B2CAA99AB008FE010 /* Release */ = {
+		575854022CA3E4B6004BDC3E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22893BFE5898E2A240A678C9 /* Pods-swift-fm-example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -520,7 +468,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"swift-fm-example/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/swift-fm-example",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -532,98 +483,148 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.7;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cb.swift-fm-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
-		57D3161D2CAA99AB008FE010 /* Debug */ = {
+		575854042CA3E4B6004BDC3E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61C1BCFEBC160F4E3133B78C /* Pods-swift-fm-exampleTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.7;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cb.swift-fm-exampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swift-fm-example.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/swift-fm-example";
+				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
-		57D3161E2CAA99AB008FE010 /* Release */ = {
+		575854052CA3E4B6004BDC3E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAEC187B0F2A9523361B2243 /* Pods-swift-fm-exampleTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.7;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cb.swift-fm-exampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swift-fm-example.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/swift-fm-example";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		575854072CA3E4B6004BDC3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cb.swift-fm-exampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = "swift-fm-example";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		575854082CA3E4B6004BDC3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cb.swift-fm-exampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = "swift-fm-example";
+				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		57D315EF2CAA99AA008FE010 /* Build configuration list for PBXProject "swift-fm-example" */ = {
+		575853D62CA3E4B5004BDC3E /* Build configuration list for PBXProject "swift-fm-example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				57D316172CAA99AB008FE010 /* Debug */,
-				57D316182CAA99AB008FE010 /* Release */,
+				575853FE2CA3E4B6004BDC3E /* Debug */,
+				575853FF2CA3E4B6004BDC3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57D316192CAA99AB008FE010 /* Build configuration list for PBXNativeTarget "swift-fm-example" */ = {
+		575854002CA3E4B6004BDC3E /* Build configuration list for PBXNativeTarget "swift-fm-example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				57D3161A2CAA99AB008FE010 /* Debug */,
-				57D3161B2CAA99AB008FE010 /* Release */,
+				575854012CA3E4B6004BDC3E /* Debug */,
+				575854022CA3E4B6004BDC3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57D3161C2CAA99AB008FE010 /* Build configuration list for PBXNativeTarget "swift-fm-exampleTests" */ = {
+		575854032CA3E4B6004BDC3E /* Build configuration list for PBXNativeTarget "swift-fm-exampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				57D3161D2CAA99AB008FE010 /* Debug */,
-				57D3161E2CAA99AB008FE010 /* Release */,
+				575854042CA3E4B6004BDC3E /* Debug */,
+				575854052CA3E4B6004BDC3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		575854062CA3E4B6004BDC3E /* Build configuration list for PBXNativeTarget "swift-fm-exampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				575854072CA3E4B6004BDC3E /* Debug */,
+				575854082CA3E4B6004BDC3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 57D315EC2CAA99AA008FE010 /* Project object */;
+	rootObject = 575853D32CA3E4B5004BDC3E /* Project object */;
 }
