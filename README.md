@@ -73,8 +73,4 @@ Table 1. Feature flags in the example application.
 6. Update a flag value and save your changes.
 7. Set the **Configuration status** to **On**.
 
-## Video preview and link to documentation
 
-Refer to the CloudBees cloud-native platform documentation, [Install the Feature management SDK](https://docs.cloudbees.com/docs/cloudbees-platform/latest/install-sdk/) for more information.
-
-[![Video Preview](assets/fm-ios-thumb.jpg)](assets/fm-screen-rec.mov)
