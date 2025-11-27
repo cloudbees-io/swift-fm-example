@@ -20,7 +20,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ObservableObject {
         
         // Set SDK keys in UI manager
         UIUpdateManager.shared.setSDKKeys(production: productionSDKKey, staging: stagingSDKKey)
-        
+
+        // Create and setup production instance
+        print("AppDelegate: Creating production ROX instance")
+        productionInstance = ROX.instance(withKey: productionSDKKey)
+
+        // Create and setup staging instance
+        print("AppDelegate: Creating staging ROX instance")
+        stagingInstance = ROX.instance(withKey: stagingSDKKey)
+
+        // Pass instances to UI manager for Dynamic API access
+        UIUpdateManager.shared.setInstances(production: productionInstance, staging: stagingInstance)
+
         // Create options for production instance
         let productionOptions = ROXOptions()
         productionOptions.verbose = .debug
@@ -28,14 +39,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ObservableObject {
             print("PRODUCTION onConfigurationFetched called with result: \(result.fetcherStatus)")
             print("PRODUCTION SDK Key: \(self.productionSDKKey)")
             print("PRODUCTION hasChanges: \(result.hasChanges)")
-            
+
             // Update UI through UIUpdateManager
             UIUpdateManager.shared.updateProductionValues()
+            UIUpdateManager.shared.updateProductionDynamicAPIValues()
         }
-        
-        // Create and setup production instance
-        print("AppDelegate: Creating production ROX instance")
-        productionInstance = ROX.instance(withKey: productionSDKKey)
+
+        // Setup production instance with options
+        print("AppDelegate: Setting up production ROX instance")
         productionInstance?.setup(withOptions: productionOptions)
         
         // Create options for staging instance
@@ -45,14 +56,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ObservableObject {
             print("STAGING onConfigurationFetched called with result: \(result.fetcherStatus)")
             print("STAGING SDK Key: \(self.stagingSDKKey)")
             print("STAGING hasChanges: \(result.hasChanges)")
-            
+
             // Update UI through UIUpdateManager
             UIUpdateManager.shared.updateStagingValues()
+            UIUpdateManager.shared.updateStagingDynamicAPIValues()
         }
-        
-        // Create and setup staging instance
-        print("AppDelegate: Creating staging ROX instance")
-        stagingInstance = ROX.instance(withKey: stagingSDKKey)
+
+        // Setup staging instance with options
+        print("AppDelegate: Setting up staging ROX instance")
         stagingInstance?.setup(withOptions: stagingOptions)
         
         // Register flag containers to their respective SDK keys

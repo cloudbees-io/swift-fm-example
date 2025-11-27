@@ -44,16 +44,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		5717E2162E5C4C1B0004FA0A /* Exceptions for "swift-fm-example" folder in "Embed Frameworks" phase from "swift-fm-example" target */ = {
+		5723431B2ED7FCEE00A426C3 /* Exceptions for "swift-fm-example" folder in "Embed Frameworks" phase from "swift-fm-example" target */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			attributesByRelativePath = {
-				ROX.framework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
-				ROXCore.framework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+				ROX.xcframework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+				ROXCore.xcframework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
 			};
 			buildPhase = 579D45DA2E2505A700113730 /* Embed Frameworks */;
 			membershipExceptions = (
-				ROX.framework,
-				ROXCore.framework,
+				ROX.xcframework,
+				ROXCore.xcframework,
 			);
 		};
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
@@ -62,7 +62,7 @@
 		575853DD2CA3E4B5004BDC3E /* swift-fm-example */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				5717E2162E5C4C1B0004FA0A /* Exceptions for "swift-fm-example" folder in "Embed Frameworks" phase from "swift-fm-example" target */,
+				5723431B2ED7FCEE00A426C3 /* Exceptions for "swift-fm-example" folder in "Embed Frameworks" phase from "swift-fm-example" target */,
 			);
 			path = "swift-fm-example";
 			sourceTree = "<group>";

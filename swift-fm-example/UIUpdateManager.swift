@@ -21,7 +21,20 @@ class UIUpdateManager: ObservableObject {
     // SDK keys for reference in UI
     @Published var productionSDKKey: String = ""
     @Published var stagingSDKKey: String = ""
-    
+
+    // Dynamic API test values
+    @Published var productionDynamicString: String = ""
+    @Published var productionDynamicInt: Int = 0
+    @Published var productionDynamicBool: Bool = false
+
+    @Published var stagingDynamicString: String = ""
+    @Published var stagingDynamicInt: Int = 0
+    @Published var stagingDynamicBool: Bool = false
+
+    // ROX instance references for Dynamic API
+    private var productionInstance: ROXInstance?
+    private var stagingInstance: ROXInstance?
+
     private init() {
         // Initialize with default values
     }
@@ -51,9 +64,54 @@ class UIUpdateManager: ObservableObject {
             print("Staging size: \(self.stagingTitleSize)")
         }
     }
-    
+
     func setSDKKeys(production: String, staging: String) {
         self.productionSDKKey = production
         self.stagingSDKKey = staging
+    }
+
+    func setInstances(production: ROXInstance?, staging: ROXInstance?) {
+        self.productionInstance = production
+        self.stagingInstance = staging
+    }
+
+    func updateProductionDynamicAPIValues() {
+        DispatchQueue.main.async {
+            guard let instance = self.productionInstance else {
+                print("Production instance not available for Dynamic API")
+                return
+            }
+
+            // Test Dynamic API with production instance (no namespace)
+            let dynamicAPI = instance.dynamicAPI()
+
+            self.productionDynamicString = dynamicAPI.getValue("dynamic_test_string", withDefault: "Default Dynamic String (Prod)")
+            self.productionDynamicInt = Int(dynamicAPI.getInt("dynamic_test_int", withDefault: 100))
+            self.productionDynamicBool = dynamicAPI.isEnabled("dynamic_test_flag", withDefault: false)
+
+            print("Production Dynamic API (Instance-based) - String: \(self.productionDynamicString)")
+            print("Production Dynamic API (Instance-based) - Int: \(self.productionDynamicInt)")
+            print("Production Dynamic API (Instance-based) - Bool: \(self.productionDynamicBool)")
+        }
+    }
+
+    func updateStagingDynamicAPIValues() {
+        DispatchQueue.main.async {
+            guard let instance = self.stagingInstance else {
+                print("Staging instance not available for Dynamic API")
+                return
+            }
+
+            // Test Dynamic API with staging instance (with 'features' namespace)
+            let dynamicAPI = instance.dynamicAPI()
+
+            self.stagingDynamicString = dynamicAPI.getValue("features.dynamic_test_string", withDefault: "Default Dynamic String (Staging)")
+            self.stagingDynamicInt = Int(dynamicAPI.getInt("features.dynamic_test_int", withDefault: 200))
+            self.stagingDynamicBool = dynamicAPI.isEnabled("features.dynamic_test_flag", withDefault: false)
+
+            print("Staging Dynamic API (Instance-based) - String: \(self.stagingDynamicString)")
+            print("Staging Dynamic API (Instance-based) - Int: \(self.stagingDynamicInt)")
+            print("Staging Dynamic API (Instance-based) - Bool: \(self.stagingDynamicBool)")
+        }
     }
 }
