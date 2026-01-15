@@ -92,35 +92,173 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ObservableObject {
         print("AppDelegate: Flag containers registered successfully")
     }
     
+    /**
+     # Target Groups Support - Alternative to ROXDynamicPropertyContext
+
+     **IMPORTANT**: The CloudBees iOS SDK fully supports target groups through multiple methods,
+     NOT just `setGlobalContext(ROXDynamicPropertyContext)`.
+
+     ## Recommended Approaches for Target Groups:
+
+     ### 1. `setCustomProperty()` - Static Values (RECOMMENDED)
+     - Use this to set user/device properties that target groups can evaluate
+     - Properties are directly usable in CloudBees console target group conditions
+     - Example: userTier, userId, region, appVersion
+
+     ### 2. `setCustomProperty()` - Dynamic/Computed Values
+     - Use closures to compute properties dynamically at evaluation time
+     - Ideal for session-based data that changes during app lifecycle
+     - Example: current user role, cart value, login state
+
+     ### 3. Instance-Specific Properties (Multi-SDK)
+     - Set different properties per SDK instance
+     - Useful for environment-specific targeting
+
+     ## CloudBees Console Usage:
+     Once you set properties here, create target groups in CloudBees console like:
+     - `userTier == "premium"`
+     - `region == "us-east"`
+     - `version >= "1.0.0"`
+
+     The SDK automatically evaluates these conditions using your custom properties.
+     */
     func setCustomProperties() {
-        // Set custom properties using instance-specific API
-        print("AppDelegate: Setting custom properties")
-        
-        // Set production properties using instance method
-        print("AppDelegate: Setting production custom properties")
-        productionInstance?.setCustomProperty(key: "env-BBB-prod", value: "production")
+        print("AppDelegate: Setting custom properties for TARGET GROUPS")
+
+        // ========================================
+        // METHOD 1: Static Custom Properties
+        // Best for: User attributes, device info, app configuration
+        // Target Group Usage: Directly in CloudBees console conditions
+        // ========================================
+
+        // Production instance properties
+        print("AppDelegate: Setting PRODUCTION custom properties")
+        productionInstance?.setCustomProperty(key: "environment", value: "production")
         productionInstance?.setCustomProperty(key: "version", value: "1.0.0")
         productionInstance?.setCustomProperty(key: "platform", value: "iOS")
-        
-        // Set staging properties using instance method
-        print("AppDelegate: Setting staging custom properties")
-        stagingInstance?.setCustomProperty(key: "env-BBB-staging", value: "staging")
+
+        // Example: User-specific properties for target groups
+        // In CloudBees console, create target group: userTier == "premium"
+        productionInstance?.setCustomProperty(key: "userTier", value: "premium")
+        productionInstance?.setCustomProperty(key: "userId", value: "user_12345")
+        productionInstance?.setCustomProperty(key: "region", value: "us-east")
+
+        // Example: Boolean properties for binary conditions
+        // In CloudBees console: isPremiumUser == true
+        productionInstance?.setCustomProperty(key: "isPremiumUser", value: true)
+
+        // Example: Numeric properties for range conditions
+        // In CloudBees console: accountAge > 30
+        productionInstance?.setCustomProperty(key: "accountAge", value: 90)
+
+        // Staging instance properties
+        print("AppDelegate: Setting STAGING custom properties")
+        stagingInstance?.setCustomProperty(key: "environment", value: "staging")
         stagingInstance?.setCustomProperty(key: "version", value: "1.0.0")
         stagingInstance?.setCustomProperty(key: "platform", value: "iOS")
-        
-        print("AppDelegate: Custom properties set for both instances")
+        stagingInstance?.setCustomProperty(key: "userTier", value: "basic")
+        stagingInstance?.setCustomProperty(key: "region", value: "us-west")
+
+        // ========================================
+        // METHOD 2: Dynamic/Computed Properties (Alternative approach)
+        // Uncomment to see dynamic properties in action
+        // ========================================
+        /*
+        // These closures are evaluated every time a flag is checked
+        // No need to manually update when user context changes!
+
+        ROX.setCustomProperty(key: "currentUserId") {
+            // This gets the current user ID at evaluation time
+            return UserSessionManager.shared.currentUserId ?? "anonymous"
+        }
+
+        ROX.setCustomProperty(key: "currentUserRole") {
+            return UserSessionManager.shared.currentRole ?? "guest"
+        }
+
+        ROX.setCustomProperty(key: "hasActiveSubscription") {
+            return UserSessionManager.shared.hasSubscription
+        }
+
+        ROX.setCustomProperty(key: "cartTotal") {
+            return CartManager.shared.totalValue
+        }
+        */
+
+        print("AppDelegate: Custom properties configured for TARGET GROUPS")
+        print("AppDelegate: These properties can now be used in CloudBees console target group conditions")
     }
-    
+
+    /**
+     # ROXDynamicPropertyContext Usage (Optional Advanced Approach)
+
+     This demonstrates using ROXDynamicPropertyContext for per-evaluation context.
+     This is DIFFERENT from custom properties and serves different use cases:
+
+     - Custom Properties: User/device attributes for target groups
+     - Dynamic Context: Evaluation-time context for A/B tests, experiments
+
+     Uncomment the code below to see ROXDynamicPropertyContext in action.
+     */
+    func setDynamicPropertyContextExample() {
+        // Example 1: Global context for A/B testing
+        guard let globalContext = RoxDynamicPropertyContext(values: [
+            "experimentVariant": "variantA" as NSString,
+            "testId": "experiment_001" as NSString,
+            "sessionType": "mobile" as NSString
+        ]) else {
+            print("Failed to create global context")
+            return
+        }
+
+        // This context will be used for all flag evaluations
+        ROX.setGlobalContext(context: globalContext)
+
+        print("Global context set for experiments")
+    }
+
+    func evaluateFlagWithContext() {
+        // Example 2: Per-evaluation context (overrides global)
+        guard let localContext = RoxDynamicPropertyContext(values: [
+            "featureAccessLevel": NSNumber(value: 5),
+            "tempOverride": "enabled" as NSString
+        ]) else {
+            print("Failed to create local context")
+            return
+        }
+
+        // Pass context directly to flag evaluation
+        if Flags1.INSTANCE.showtitle.isEnabled(localContext) {
+            print("Flag enabled with local context")
+        }
+
+        // Get string value with context (use value() method)
+        let title = Flags1.INSTANCE.title.value(localContext)
+        print("Title with context: \(title)")
+    }
+
     func fetchConfigurations() {
         // Fetch configuration for production instance
         print("AppDelegate: Fetching production configuration")
         productionInstance?.fetch()
-        
+
         // Fetch configuration for staging instance
         print("AppDelegate: Fetching staging configuration")
         stagingInstance?.fetch()
-        
+
         print("AppDelegate: Configurations fetched successfully")
+
+        // Validate target groups after fetch
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.validateTargetGroups()
+        }
+    }
+
+    func validateTargetGroups() {
+        print("\n🔍 TARGET GROUP VALIDATION:")
+        print("Production - showPremiumFeature: \(Flags1.INSTANCE.showPremiumFeature.isEnabled)")
+        print("Staging - showPremiumFeature: \(Flags2.INSTANCE.showPremiumFeature.isEnabled)")
+        print("\n")
     }
 }
 
