@@ -259,6 +259,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ObservableObject {
         print("Production - showPremiumFeature: \(Flags1.INSTANCE.showPremiumFeature.isEnabled)")
         print("Staging - showPremiumFeature: \(Flags2.INSTANCE.showPremiumFeature.isEnabled)")
         print("\n")
+
+        // Run comprehensive validation tests
+        // This validates the three approaches the customer tried
+        TargetGroupsValidation.validateAllApproaches(with: productionInstance)
+
+        // Optional: Test different property types
+        // Uncomment to run additional validation tests
+        // TargetGroupsValidation.testDifferentPropertyTypes(with: productionInstance)
     }
 }
 

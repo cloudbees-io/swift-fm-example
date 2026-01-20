@@ -583,6 +583,33 @@
           },
           {
             "kind": "Function",
+            "name": "setGlobalContext",
+            "printedName": "setGlobalContext(context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ROXDynamicPropertyContext",
+                "printedName": "ROXCore.ROXDynamicPropertyContext",
+                "usr": "c:objc(cs)ROXDynamicPropertyContext"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3ROX11ROXInstanceC16setGlobalContext7contextySo018ROXDynamicPropertyE0C_tF",
+            "mangledName": "$s3ROX11ROXInstanceC16setGlobalContext7contextySo018ROXDynamicPropertyE0C_tF",
+            "moduleName": "ROX",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "dynamicAPI",
             "printedName": "dynamicAPI()",
             "children": [
@@ -1986,7 +2013,7 @@
     {
       "filePath": "\/Users\/CB\/rollout\/Rollout-X-SDK\/RoxSdk\/RoxSdk\/ROX.swift",
       "kind": "StringLiteral",
-      "offset": 8924,
+      "offset": 9824,
       "length": 2,
       "value": "\"\""
     }

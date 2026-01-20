@@ -55,6 +55,7 @@ public typealias RoxDouble = ROXDouble
   public func setCustomProperty(key: Swift.String, value: Swift.Bool)
   public func setCustomProperty(key: Swift.String, value: Swift.Int)
   public func setCustomProperty(key: Swift.String, value: Swift.Double)
+  public func setGlobalContext(context: ROXDynamicPropertyContext)
   public func dynamicAPI() -> ROXDynamicAPI
   @objc deinit
 }

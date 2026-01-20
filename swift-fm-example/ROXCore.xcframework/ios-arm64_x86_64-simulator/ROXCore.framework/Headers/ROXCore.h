@@ -155,6 +155,19 @@ typedef NS_ENUM(NSUInteger, ROXCoreState) {
 - (void)setCustomDoubleProperty:(double)value forKey:(NSString *)key;
 
 /**
+ * Sets the global dynamic property context for this `ROXCore` instance.
+ *
+ * This context will be used when evaluating flags that don't have a context explicitly passed.
+ * Properties in the global context can be used in target group conditions on the dashboard.
+ *
+ * @param context The ROXDynamicPropertyContext to use globally for this instance
+ *
+ * @note When using multi-instance mode (instanceWithSDKKey:), you MUST call this method
+ * on the specific instance, not using the class method!
+ */
+- (void)setGlobalDynamicPropertyContext:(ROXDynamicPropertyContext * _Nullable)context;
+
+/**
  * Shuts down this `ROXCore` instance.
  */
 - (void)shutdown;
