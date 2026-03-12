@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target x86_64-apple-tvos10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ROX
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
+// swift-module-flags: -target x86_64-apple-tvos12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ROX
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
 import Foundation
 @_exported import ROX
 import ROXCore
@@ -61,18 +61,28 @@ public typealias RoxDouble = ROXDouble
   public static func flagsViewController() -> UIKit.UIViewController
   public static func setCustomProperty(key: Swift.String, value: Swift.String)
   public static func setCustomProperty(key: Swift.String, asSemver: Swift.Bool, value: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func setCustomProperty(key: Swift.String, value: @escaping (Swift.String?, ROXDynamicPropertyContext?) -> Swift.String)
+  #endif
   public static func setCustomProperty(key: Swift.String, value: @escaping () -> Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func setCustomProperty(key: Swift.String, asSemver: Swift.Bool, value: @escaping (Swift.String?, ROXDynamicPropertyContext?) -> Swift.String)
+  #endif
   public static func setCustomProperty(key: Swift.String, asSemver: Swift.Bool, value: @escaping () -> Swift.String)
   public static func setCustomProperty(key: Swift.String, value: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func setCustomProperty(key: Swift.String, value: @escaping (Swift.String?, ROXDynamicPropertyContext?) -> Swift.Bool)
+  #endif
   public static func setCustomProperty(key: Swift.String, value: @escaping () -> Swift.Bool)
   public static func setCustomProperty(key: Swift.String, value: Swift.Int32)
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func setCustomProperty(key: Swift.String, value: @escaping (Swift.String?, ROXDynamicPropertyContext?) -> Swift.Int32)
+  #endif
   public static func setCustomProperty(key: Swift.String, value: @escaping () -> Swift.Int32)
   public static func setCustomProperty(key: Swift.String, value: Swift.Double)
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func setCustomProperty(key: Swift.String, value: @escaping (Swift.String?, ROXDynamicPropertyContext?) -> Swift.Double)
+  #endif
   public static func setCustomProperty(key: Swift.String, value: @escaping () -> Swift.Double)
   public static func setGlobalContext(context: ROXDynamicPropertyContext)
   public static func fetch()
@@ -83,10 +93,14 @@ public typealias RoxDouble = ROXDouble
   @objc deinit
 }
 public protocol RoxContainer : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   var namespace: Swift.String? { get }
+  #endif
 }
 extension RoxContainer {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var namespace: Swift.String? {
     get
   }
+  #endif
 }
