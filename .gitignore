@@ -62,3 +62,9 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Markdown files
+*.md
+
+# Claude settings
+.claude/settings.local.json

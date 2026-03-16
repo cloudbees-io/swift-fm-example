@@ -2,173 +2,64 @@
 //  ContentView.swift
 //  swift-fm-example
 //
-//  Created by Ankur Vekariya on 25/09/24.
+//  Simple UI to test customer's Dynamic API implementation
 //
 
 import SwiftUI
-import ROX
-import ROXCore
-
-enum titleColor: String {
-    case white = "White"
-    case blue = "Blue"
-    case green = "Green"
-    case yellow = "Yellow"
-}
 
 struct ContentView: View {
-    @StateObject private var uiManager = UIUpdateManager.shared
-    
     var body: some View {
         NavigationView {
-            VStack(spacing: 20) {
-                
+            VStack(spacing: 30) {
                 // Header
-                VStack(alignment: .leading, spacing: -5) {
+                VStack(alignment: .leading, spacing: 5) {
                     Text("CloudBees")
                         .font(.subheadline)
                         .fontWeight(.bold)
-                    Text("Feature Management")
+                    Text("Customer Bug Test")
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                    Text("Multi-SDK Demo")
+                    Text("Dynamic API + Custom Properties")
                         .font(.headline)
                         .foregroundColor(.secondary)
                 }
-                .padding(.bottom)
-                
-                // Multi-SDK Configuration List
-                List {
+                .padding()
 
-                // Production Configuration
-                Section(header: Text("Production SDK - Static Flags")) {
-                    if uiManager.showProductionText {
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text("\(uiManager.productionSDKKey.prefix(5))****")
-                                .font(.headline)
-                                .foregroundColor(.secondary)
-                            Text(uiManager.productionTitle)
-                                .font(.system(size: CGFloat(uiManager.productionTitleSize)))
-                                .foregroundColor(colorFromName(uiManager.productionTitleColor.lowercased()))
-                        }
-                        .padding(.vertical, 4)
-                    }
-                }
+                // Instructions
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Test Instructions:")
+                        .font(.headline)
+                        .fontWeight(.bold)
 
-                // Production Dynamic API
-                Section(header: Text("Production SDK - Dynamic API")) {
-                    VStack(alignment: .leading, spacing: 6) {
-                        HStack {
-                            Text("String:")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                            Text(uiManager.productionDynamicString)
-                                .font(.caption)
-                                .fontWeight(.medium)
-                        }
-                        HStack {
-                            Text("Int:")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                            Text("\(uiManager.productionDynamicInt)")
-                                .font(.caption)
-                                .fontWeight(.medium)
-                        }
-                        HStack {
-                            Text("Bool:")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                            Text("\(uiManager.productionDynamicBool ? "Enabled" : "Disabled")")
-                                .font(.caption)
-                                .fontWeight(.medium)
-                                .foregroundColor(uiManager.productionDynamicBool ? .green : .red)
-                        }
-                    }
-                    .padding(.vertical, 4)
-                }
+                    Text("1. Check Xcode console for test results")
+                    Text("2. Look for '🧪 Testing Dynamic API...'")
+                    Text("3. Verify showPremiumFeature = true")
 
-                // Staging Configuration
-                Section(header: Text("Staging SDK - Static Flags")) {
-                    if uiManager.showStagingText {
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text("\(uiManager.stagingSDKKey.prefix(5))****")
-                                .font(.headline)
-                                .foregroundColor(.secondary)
-                            Text(uiManager.stagingTitle)
-                                .font(.system(size: CGFloat(uiManager.stagingTitleSize)))
-                                .foregroundColor(colorFromName(uiManager.stagingTitleColor.lowercased()))
-                        }
-                        .padding(.vertical, 4)
-                    }
-                }
+                    Divider()
 
-                // Staging Dynamic API
-                Section(header: Text("Staging SDK - Dynamic API")) {
-                    VStack(alignment: .leading, spacing: 6) {
-                        HStack {
-                            Text("String:")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                            Text(uiManager.stagingDynamicString)
-                                .font(.caption)
-                                .fontWeight(.medium)
-                        }
-                        HStack {
-                            Text("Int:")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                            Text("\(uiManager.stagingDynamicInt)")
-                                .font(.caption)
-                                .fontWeight(.medium)
-                        }
-                        HStack {
-                            Text("Bool:")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                            Text("\(uiManager.stagingDynamicBool ? "Enabled" : "Disabled")")
-                                .font(.caption)
-                                .fontWeight(.medium)
-                                .foregroundColor(uiManager.stagingDynamicBool ? .green : .red)
-                        }
-                    }
-                    .padding(.vertical, 4)
+                    Text("To reproduce bug:")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .padding(.top)
+
+                    Text("1. Run app ONLINE with SDK-KEY-1")
+                    Text("2. Stop app")
+                    Text("3. Change projectKey to SDK-KEY-2")
+                    Text("4. Run app OFFLINE")
+                    Text("5. Check if custom properties work")
                 }
-                }
-                
+                .padding()
+                .background(Color.gray.opacity(0.1))
+                .cornerRadius(10)
+                .padding(.horizontal)
+
                 Spacer()
+
+                Text("See Xcode Console for results")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
             }
             .padding()
-
-        }
-        .onAppear {
-            // Initial UI update
-            uiManager.updateProductionValues()
-            uiManager.updateStagingValues()
-
-            // Initial Dynamic API update
-            uiManager.updateProductionDynamicAPIValues()
-            uiManager.updateStagingDynamicAPIValues()
-
-            print("Multi-SDK Demo: UI manager initialized")
-        }
-    }
-    
-    func colorFromName(_ name: String) -> Color {
-        switch name {
-        case "red":
-            return .red
-        case "green":
-            return .green
-        case "blue":
-            return .blue
-        case "yellow":
-            return .yellow
-        case "black":
-            return .black
-        case "white":
-            return .white
-        default:
-            return .gray // Fallback color
         }
     }
 }
